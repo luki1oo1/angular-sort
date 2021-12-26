@@ -1,0 +1,17 @@
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="company">Company </th>
+    <th mat-sort-header="contact">Contact</th>
+    <th mat-sort-header="country">Country</th>
+    <th mat-sort-header="yearOfBirth">Year of birth</th>
+    <th mat-sort-header="points">Points</th>
+  </tr>
+
+  <tr *ngFor="let dataList of sortedData">
+    <td>{{dataList.company}}</td>
+    <td>{{dataList.contact}}</td>
+    <td>{{dataList.countryName}}</td>
+    <td>{{dataList.yearOfBirth}}</td>
+    <td>{{dataList.points}}</td>
+  </tr>
+</table>
